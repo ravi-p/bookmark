@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	{% extends "base.html"  %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/site_media/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="text"]
+       .form-signin input[type="password"]{
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+    <link href="/site_media/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/site_media/js//html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/site_media/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/site_media/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/site_media/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/site_media/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+	{% block content %}
+		<form method="post" action="/contact/"  class="form-signin">
+			<h2 class="form-signin-heading">Details</h2> 
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button class="btn btn-large btn-primary" type="submit">Submit</button>
+		</form>
+	{% endblock %}
+		<!--      <form class="form-signin">
+				<h2 class="form-signin-heading">Please sign in</h2>
+				
+				<input type="text" class="input-block-level" placeholder="Email address">
+				<input type="password" class="input-block-level" placeholder="Password">
+				<label class="checkbox"><input type="checkbox" value="remember-me"> Remember me</label>
+				<button class="btn btn-large btn-primary" type="submit">Sign in</button>
+			</form>
+		-->
+    
+    
+</div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/site_media/js//jquery.js"></script>
+    <script src="/site_media/js//bootstrap-transition.js"></script>
+    <script src="/site_media/js//bootstrap-alert.js"></script>
+    <script src="/site_media/js//bootstrap-modal.js"></script>
+    <script src="/site_media/js//bootstrap-dropdown.js"></script>
+    <script src="/site_media/js//bootstrap-scrollspy.js"></script>
+    <script src="/site_media/js//bootstrap-tab.js"></script>
+    <script src="/site_media/js//bootstrap-tooltip.js"></script>
+    <script src="/site_media/js//bootstrap-popover.js"></script>
+    <script src="/site_media/js//bootstrap-button.js"></script>
+    <script src="/site_media/js//bootstrap-collapse.js"></script>
+    <script src="/site_media/js//bootstrap-carousel.js"></script>
+    <script src="/site_media/js//bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+

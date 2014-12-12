@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+ <title>{% block title %}Register{% endblock %}</title>
+
+
+
+
+    <div class="container">
+
+	{% block containt %}
+		<form method="GET" action="."  class="form-signin">
+			<h2 class="form-signin-heading">Edit Contact</h2> 
+			{% csrf_token %}
+			{{ form.name.errors }}
+			<label>Name</label>
+			{{ form.name }}
+			<br>
+			{{ form.email.errors }}
+			<label>First</label>
+			{{ form.email }}
+			<br>
+			{{ form.msg.errors }}
+			<label>Last name</label>
+			{{ form.msg }}
+			<br>
+			{{ form.phone.errors }}
+			<label>Email</label>
+			{{ form.phone }}			
+			<button class="btn btn-large btn-primary" type="submit">Save</button>
+		</form>
+	{% endblock %}
+
+    </div> <!-- /container -->
+
+  
+

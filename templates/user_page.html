@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ username }}{% endblock %}
+{% block head %}Bookmarks for {{ username }}{% endblock %}
+{% block containt %}
+    {% ifequal user.username username %}
+        <a href="/friends/{{ username }}/">view your friends</a>
+    {% else %}
+        {% if is_friend %}
+            <a href="/friends/{{ user.username }}/">{{ username }} is a friend of yours</a>
+        {% else %}
+            <a href="/friend/add/?username={{ username }}">add {{ username }} to your friends</a>
+        {% endif %}
+            - <a href="/friends/{{ username }}/">view {{username }}'s friends</a>
+    {% endifequal %}
+	{% include "bookmark_list.html"%}
+    {% comment %}
+    {% if bookmarks %}
+		<ul>
+		    {% for bookmark in bookmarks %}
+		        <li><a href="{{ bookmark.link.url }}">{{ bookmark.title }}</a></li>
+		    {% endfor %}
+		</ul>
+	{% else %}
+		<p>No bookmarks found.</p>
+	{% endif %}
+    {% endcomment %}
+{% endblock %}

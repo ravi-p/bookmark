@@ -1,0 +1,27 @@
+#nav {
+float: right;
+font-family:arial;
+border:1;
+}
+
+
+input {
+display: block;
+}
+
+#t1{
+	border:1;
+	
+}
+#t2 { /* Text and background colour, blue on light gray */
+color:#00f;
+background-color:#ddd
+}
+
+ul.messages {
+    border: 1px dashed #000;
+    margin: 1em 4em;
+    padding: 1em;
+}
+
+
